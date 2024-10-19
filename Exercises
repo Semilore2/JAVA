@@ -1,0 +1,78 @@
+//Sum of Elements in an Array
+public class ArraySum {
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4, 5};
+        int result = sumArray(numbers);
+        System.out.println("Sum of elements: " + result);
+    }
+    public static int sumArray(int[] arr) {
+        int sum = 0;
+        for (int num : arr){
+            sum += num;
+        }
+        return sum;
+    }
+}
+
+
+//Find Maximum Value in an Array
+public class FindMax {
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4, 10, 7};
+        int max = findMax(numbers);
+        System.out.println("Maximum value: " + max);
+    }
+    public static int findMax(int[] arr) {
+        int max = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+}
+
+
+//Reverse an Array
+public class ReverseArray {
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4, 5};
+        reverseArray(numbers);
+        System.out.println("Reversed array:");
+        for (int num : numbers) {
+            System.out.print(num + " ");
+        }
+    }
+    public static void reverseArray(int[] arr) {
+        int start = 0;
+        int end = arr.length - 1;
+        while (start < end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+    }
+}
+
+
+//Count occurences of a value
+public class ArrayOccurence {
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4, 5, 2, 3, 2};
+        int value = 2;
+        int occurences = countOccurences(numbers, value);
+        System.out.println("Occurences of " + value + ": " + occurences);
+    }
+    public static int countOccurences(int[] arr, int value) {
+        int count = 0;
+        for (int num : arr) {
+            if (num == value) {
+                count++;
+            }
+        }
+        return count;
+    }
+}
